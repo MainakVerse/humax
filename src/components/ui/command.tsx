@@ -11,16 +11,21 @@ import { Dialog, DialogContent } from "@/components/ui/dialog"
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
->(({ className, ...props }, ref) => (
-  <CommandPrimitive
-    ref={ref}
-    className={cn(
-      "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
-      className
-    )}
-    {...props}
-  />
-))
+>(({ className, ...props }, ref) => {
+  const combinedClassName = cn(
+    "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
+    className
+  );
+
+  return (
+    <CommandPrimitive
+      ref={ref}
+      className={combinedClassName}
+      {...props}
+    />
+  );
+});
+
 Command.displayName = CommandPrimitive.displayName
 
 const CommandDialog = ({ children, ...props }: DialogProps) => {
