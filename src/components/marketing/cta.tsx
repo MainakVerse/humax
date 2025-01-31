@@ -44,7 +44,7 @@ const CTA = () => {
                         Ready to boost your <br /> <span className="font-subheading italic">marketing</span> ?
                     </h2>
                     <p className="text-sm md:text-lg text-center text-accent-foreground/80 max-w-2xl mx-auto mt-4">
-                        Transform your marketing with AI-powered automation. Create campaigns faster, generate better content <span className="hidden lg:inline">and make smarter decisions in minutes.</span>
+                        Transform your marketing with AEO. Create campaigns faster, generate better content <span className="hidden lg:inline">and make smarter decisions in minutes.</span>
                     </p>
                     <Link href="#pricing" className="mt-8">
                         <Button size="lg">
